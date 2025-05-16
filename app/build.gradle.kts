@@ -84,7 +84,6 @@ dependencies {
     implementation(libs.androidx.compose.navigation)
 
     implementation(project(":smollm"))
-    implementation(project(":hf-model-hub-api"))
 
     // Koin: dependency injection
     implementation(libs.koin.android)

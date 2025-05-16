@@ -1,4 +1,4 @@
-package io.shubham0204.smollmandroid
+package io.smollmandroid
 
 import org.junit.Assert.*
 import org.junit.Test

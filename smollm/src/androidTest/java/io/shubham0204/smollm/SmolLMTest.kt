@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.shubham0204.smollm
+package io.smollm
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import kotlinx.coroutines.flow.toList

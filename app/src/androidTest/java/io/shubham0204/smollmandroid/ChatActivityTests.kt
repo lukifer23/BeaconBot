@@ -1,4 +1,4 @@
-package io.shubham0204.smollmandroid
+package io.smollmandroid
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import org.junit.Rule
