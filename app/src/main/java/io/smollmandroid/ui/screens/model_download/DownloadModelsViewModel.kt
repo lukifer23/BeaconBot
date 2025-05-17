@@ -54,11 +54,6 @@ class DownloadModelsViewModel(
     // default context size for the LLM
     private val defaultContextSize = 2048
 
-    private val _modelInfoAndTree =
-        MutableStateFlow<Pair<HFModelInfo.ModelInfo, List<HFModelTree.HFModelFile>>?>(null)
-    val modelInfoAndTree: StateFlow<Pair<HFModelInfo.ModelInfo, List<HFModelTree.HFModelFile>>?> =
-        _modelInfoAndTree
-
     val selectedModelState = mutableStateOf<LLMModel?>(null)
     val modelUrlState = mutableStateOf("")
 
@@ -86,8 +81,6 @@ class DownloadModelsViewModel(
                 ).setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, fileName)
         downloadManager.enqueue(request)
     }
-
-    fun getModels(query: String): Flow<PagingData<HFModelSearch.ModelSearchResult>> = hfModelsAPI.getModelsList(query)
 
     /**
      * Given the model file URI, copy the model file to the app's internal directory. Once copied,
@@ -140,19 +133,6 @@ class DownloadModelsViewModel(
                     context.getString(R.string.toast_invalid_file),
                     Toast.LENGTH_SHORT,
                 ).show()
-        }
-    }
-
-    fun fetchModelInfoAndTree(modelId: String) {
-        _modelInfoAndTree.value = null
-        CoroutineScope(Dispatchers.IO).launch {
-            val modelInfo = hfModelsAPI.getModelInfo(modelId)
-            var modelTree = hfModelsAPI.getModelTree(modelId)
-            modelTree =
-                modelTree.filter { modelFile ->
-                    modelFile.path.endsWith("gguf")
-                }
-            _modelInfoAndTree.value = Pair(modelInfo, modelTree)
         }
     }
 }
