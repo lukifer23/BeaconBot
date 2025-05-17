@@ -22,7 +22,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import io.smollmandroid.llm.ModelsRepository
 import io.smollmandroid.ui.screens.chat.ChatActivity
-import io.smollmandroid.ui.screens.model_download.DownloadModelActivity
 import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {

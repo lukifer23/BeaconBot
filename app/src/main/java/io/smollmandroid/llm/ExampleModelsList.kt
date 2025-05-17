@@ -25,28 +25,23 @@ import io.smollmandroid.data.LLMModel
 val exampleModelsList =
     listOf(
         LLMModel(
-            name = "SmolLM2 360M Instruct GGUF",
-            url =
-                "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct-GGUF/resolve/main/smollm2-360m-instruct-q8_0.gguf",
+            name = "Local Model 1",
+            url = "file:///path/to/local/model1.gguf",
         ),
         LLMModel(
-            name = "SmolLM2 1.7B Instruct GGUF",
-            url =
-                "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF/resolve/main/smollm2-1.7b-instruct-q4_k_m.gguf",
+            name = "Local Model 2",
+            url = "file:///path/to/local/model2.gguf",
         ),
         LLMModel(
-            name = "Qwen2.5 1.5B Q8 Instruct GGUF",
-            url =
-                "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q8_0.gguf",
+            name = "Local Model 3",
+            url = "file:///path/to/local/model3.gguf",
         ),
         LLMModel(
-            name = "Qwen2.5 3B Q5_K_M Instruct GGUF",
-            url =
-                "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q5_k_m.gguf",
+            name = "Local Model 4",
+            url = "file:///path/to/local/model4.gguf",
         ),
         LLMModel(
-            name = "Qwen2.5 Coder 3B Instruct Q5 GGUF",
-            url =
-                "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/resolve/main/qwen2.5-coder-3b-instruct-q5_0.gguf",
+            name = "Local Model 5",
+            url = "file:///path/to/local/model5.gguf",
         ),
     )
